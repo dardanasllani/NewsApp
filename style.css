@@ -1,0 +1,90 @@
+/* CSS here */
+.news-posts {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  grid-auto-flow: row;
+  grid-auto-rows: 1fr;
+}
+
+@media (max-width: 1024px) {
+  .news-posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .news-posts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+h2 {
+  text-overflow: ellipsis;
+  margin: 0;
+  padding-bottom: 10px;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+form select,
+form input {
+  margin: 10px 5px;
+  padding: 0;
+}
+.post-content {
+  background-color: #eef7ab;
+  padding: 10px 20px;
+  border-radius: 0 0 5px 5px;
+  white-space: normal;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.articleContentHeader {
+  height: 160px;
+}
+.post-metas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 600 !important;
+}
+.post-metas-date {
+  text-align: left;
+  width: 50%;
+}
+.post-metas-topic {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  width: 50%;
+}
+.post-metas-topic p {
+  margin: 0;
+}
+.post-metas-topic p:first-child:after {
+  content: "|";
+  padding: 0px 5px;
+}
+.pagination-main {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.pagination {
+  padding: 15px 20px;
+  margin: 5px;
+  width: fit-content;
+  background-color: #c9c9c9;
+  cursor: pointer;
+}
